@@ -62,8 +62,10 @@
 .hero {
   text-align: center;
   padding: 120px 20px;
- 
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/333/666?text=Mushroom+Farm+Background'); 
+  
+  /* I removed the url(...) that contained the text */
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)); 
+  
   background-size: cover;
   background-position: center;
   color: var(--white);
