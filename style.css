@@ -62,8 +62,7 @@
 .hero {
   text-align: center;
   padding: 120px 20px;
-  
-  /* I removed the url(...) that contained the text */
+
   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)); 
   
   background-size: cover;
