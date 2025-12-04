@@ -1,0 +1,260 @@
+
+:root {
+  --primary-green: #2e7d32;   /* Dark agricultural green */
+  --light-green: #e8f5e9;     /* Background tint */
+  --accent-color: #ff9800;    /* Alert/Action color */
+  --dark-text: #333333;
+  --light-text: #666666;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif; /* Clean modern font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+.cta-small {
+  padding: 8px 20px;
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  /* Linear gradient overlay to make text readable */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/333/666?text=Mushroom+Farm+Background'); 
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-primary {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.cta-primary:hover {
+  background-color: #1b5e20;
+}
+
+.cta-secondary {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+  background-color: white;
+  color: var(--primary-green);
+}
+
+/* Features Section - Using Flexbox */
+.features {
+  padding: 80px 20px;
+  background-color: var(--light-green);
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Visual Section - Split Layout */
+.visual-section {
+  display: flex;
+  align-items: center;
+  padding: 80px 5%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.visual-content {
+  flex: 1;
+}
+
+.visual-image {
+  flex: 1;
+}
+
+.visual-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.visual-list {
+  list-style: none;
+  padding: 0;
+}
+
+.visual-list li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Info/Benefits Section - Using CSS Grid */
+.info {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.grid-item {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary-green);
+  text-align: left;
+}
+
+/* Call to Action Final */
+.cta-final {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #333;
+  color: var(--white);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE DESIGN (Media Queries) */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .nav-links {
+    display: none; /* Simple hiding for mobile, ideally replace with hamburger menu */
+  }
+
+  /* Stack features vertically */
+  .features-container {
+    flex-direction: column;
+  }
+
+  /* Stack visual section vertically */
+  .visual-section {
+    flex-direction: column-reverse; /* Puts image on top of text on mobile */
+    text-align: center;
+  }
+  
+  .visual-list li {
+    text-align: left;
+  }
+
+  /* Change Grid to single column */
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
