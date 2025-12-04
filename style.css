@@ -1,26 +1,26 @@
 
-:root {
-  --primary-green: #2e7d32;   /* Dark agricultural green */
-  --light-green: #e8f5e9;     /* Background tint */
-  --accent-color: #ff9800;    /* Alert/Action color */
-  --dark-text: #333333;
-  --light-text: #666666;
-  --white: #ffffff;
-  --max-width: 1200px;
-}
+  :root {
+    --primary-green: #2e7d32;  
+    --light-green: #e8f5e9;     
+    --accent-color: #ff9800;    
+    --dark-text: #333333;
+    --light-text: #666666;
+    --white: #ffffff;
+    --max-width: 1200px;
+  }
+  
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark-text);
+    line-height: 1.6;
+  }
 
-body {
-  font-family: 'Inter', Arial, sans-serif; /* Clean modern font */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: var(--dark-text);
-  line-height: 1.6;
-}
 
-/* Navigation */
 .navbar {
-  display: flex; /* Flexbox for layout */
+  display: flex; 
   justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
@@ -31,38 +31,38 @@ body {
   z-index: 1000;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-green);
-}
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-green);
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-text);
+      font-weight: 600;
+    }
+    
+    .cta-small {
+      padding: 8px 20px;
+      background-color: var(--primary-green);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--dark-text);
-  font-weight: 600;
-}
-
-.cta-small {
-  padding: 8px 20px;
-  background-color: var(--primary-green);
-  color: var(--white);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 120px 20px;
-  /* Linear gradient overlay to make text readable */
+ 
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/333/666?text=Mushroom+Farm+Background'); 
   background-size: cover;
   background-position: center;
@@ -74,31 +74,31 @@ body {
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-primary {
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  background-color: var(--primary-green);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 10px;
-}
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-primary {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
 
 .cta-primary:hover {
   background-color: #1b5e20;
 }
 
-.cta-secondary {
+    .cta-secondary {
   padding: 15px 30px;
   font-size: 1.1rem;
   background-color: transparent;
@@ -115,7 +115,7 @@ body {
   color: var(--primary-green);
 }
 
-/* Features Section - Using Flexbox */
+
 .features {
   padding: 80px 20px;
   background-color: var(--light-green);
@@ -132,7 +132,7 @@ body {
   gap: 30px;
   max-width: var(--max-width);
   margin: 0 auto;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .feature-card {
@@ -146,7 +146,7 @@ body {
 }
 
 .feature-card:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
+  transform: translateY(-10px);
 }
 
 .icon {
@@ -154,7 +154,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Visual Section - Split Layout */
+
 .visual-section {
   display: flex;
   align-items: center;
@@ -189,7 +189,7 @@ body {
   border-left: 4px solid var(--accent-color);
 }
 
-/* Info/Benefits Section - Using CSS Grid */
+
 .info {
   padding: 80px 20px;
   text-align: center;
@@ -198,7 +198,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 30px;
   max-width: 900px;
   margin: 40px auto 0;
@@ -228,32 +228,31 @@ footer {
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE DESIGN (Media Queries) */
+
 @media screen and (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
   }
   
   .nav-links {
-    display: none; /* Simple hiding for mobile, ideally replace with hamburger menu */
+    display: none;
   }
 
-  /* Stack features vertically */
+
   .features-container {
     flex-direction: column;
   }
 
-  /* Stack visual section vertically */
+
   .visual-section {
-    flex-direction: column-reverse; /* Puts image on top of text on mobile */
-    text-align: center;
+    flex-direction: column-reverse; 
   }
   
   .visual-list li {
     text-align: left;
   }
 
-  /* Change Grid to single column */
+
   .grid-container {
     grid-template-columns: 1fr;
   }
